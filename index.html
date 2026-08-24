@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Cuts — Senior Video Editor & Retention Specialist</title>
+  <meta name="description" content="High-converting video editing portfolio for creators, YouTubers, and brands. Viral short-form, retention-engineered YouTube edits, 3D VFX, and commercial color grading.">
+  
+  <!-- Google Fonts: Syne (display) & Plus Jakarta Sans (body) & JetBrains Mono (tech specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Lights -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+    <div class="glow-orb-3"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="main-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo-link">
+        <div class="logo-icon">AC</div>
+        <div>
+          <span class="brand-name">APEX CUTS</span>
+          <span class="brand-tag">Alex Reed • Senior Editor</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#showreel" class="nav-link">Showreel</a></li>
+          <li><a href="#portfolio" class="nav-link">Edits</a></li>
+          <li><a href="#sound-lab" class="nav-link">Sound Lab</a></li>
+          <li><a href="#retention-lab" class="nav-link">Retention</a></li>
+          <li><a href="#comparison" class="nav-link">Before/After</a></li>
+          <li><a href="#calculator" class="nav-link">Estimator</a></li>
+          <li><a href="#pricing" class="nav-link">Packages</a></li>
+          <li><a href="#contact" class="nav-link">Hire</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-drawer-toggle" id="open-drawer-btn" title="View Submitted Inquiries">
+          <span>📁 Briefs</span>
+          <span class="inquiry-badge-count" id="inquiry-count-badge">0</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" id="nav-cta-btn">Book Project</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge badge-live">
+            <span class="pulse-dot"></span>
+            Available for Q3/Q4 Projects
+          </div>
+          <h1 class="hero-title">
+            Turning Raw Footage Into <span class="text-gradient">Viral Retention</span> & Cinematic Art.
+          </h1>
+          <p class="hero-description">
+            I craft dopamine-fueled YouTube videos, viral vertical reels, and high-production commercials that keep viewers glued to the screen and convert clicks into paying clients.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" onclick="openVideoModal('project-1')">
+              <span>▶</span> Watch 2025 Reel
+            </button>
+            <a href="#portfolio" class="btn btn-secondary btn-lg">Explore Edits</a>
+          </div>
+
+          <!-- Quick Stats Bar -->
+          <div class="stats-bar" id="hero-stats">
+            <div class="stat-item">
+              <div class="stat-value">120M<span>+</span></div>
+              <div class="stat-label">Organic Views</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">4.2<span>x</span></div>
+              <div class="stat-label">Avg Retention</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">350<span>+</span></div>
+              <div class="stat-label">Edits Shipped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">24<span>h</span></div>
+              <div class="stat-label">Fast Turnaround</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Showreel Showcase Card -->
+        <div class="showreel-card" id="showreel">
+          <div class="video-preview-wrapper" onclick="openVideoModal('project-1')">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80" alt="Apex Cuts 2025 Showreel Thumbnail" class="video-thumb">
+            <div class="video-overlay">
+              <div class="badge">Master Reel 2025</div>
+              <div class="play-button-center">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="timeline-scrubber">
+                <div class="timeline-progress"></div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card-meta">
+            <div>
+              <div style="font-weight: 700; font-size: 0.98rem;">2025 Commercial & Creator Showreel</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">4K 60FPS • Dolby Atmos Sound Mix</div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openVideoModal('project-1')">Play Full (2:10)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Software Tool Ticker -->
+    <div class="software-ticker">
+      <div class="container ticker-wrapper">
+        <div class="ticker-label">Production Software Arsenal:</div>
+        <div class="ticker-logos">
+          <div class="tool-chip"><span class="dot"></span> Adobe Premiere Pro 2025</div>
+          <div class="tool-chip"><span class="dot"></span> DaVinci Resolve Studio (Color)</div>
+          <div class="tool-chip"><span class="dot"></span> After Effects (Motion & VFX)</div>
+          <div class="tool-chip"><span class="dot"></span> Blender 3D (Asset Comp)</div>
+          <div class="tool-chip"><span class="dot"></span> Pro Tools (Sound Foley)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Portfolio Section -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan">Proof Of Craft</div>
+        <h2>Selected Works & Retention Edits</h2>
+        <p>Explore real-world client edits engineered for high watch-time, viral sound design, and brand prestige.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="portfolio-controls" id="portfolio-controls">
+        <button class="filter-btn active" data-category="all">All Edits</button>
+        <button class="filter-btn" data-category="youtube">YouTube Longform</button>
+        <button class="filter-btn" data-category="shorts">Shorts & TikTok (9:16)</button>
+        <button class="filter-btn" data-category="commercial">Commercials & Ads</button>
+        <button class="filter-btn" data-category="gaming">Gaming Montages</button>
+        <button class="filter-btn" data-category="vfx">3D & VFX</button>
+      </div>
+
+      <!-- Projects Grid Container (Populated via app.js) -->
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: The Sound Lab & Foley Sampler -->
+  <section class="section" id="sound-lab">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-purple">Audio Architecture</div>
+        <h2>Interactive Sound Design Lab</h2>
+        <p>60% of video retention is sound design. Test drive custom audio cues and hear the difference real Foley makes.</p>
+      </div>
+
+      <div class="sound-lab-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h3 style="font-size: 1.25rem;">Live Web Audio SFX Trigger Board</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Click any trigger pad below to synthesize sound effects in real-time:</p>
+          </div>
+          <div class="badge badge-live">Audio Engine Active</div>
+        </div>
+
+        <div class="sound-pads-grid" id="sound-pads-grid">
+          <button class="sound-pad-btn" data-sound="subdrop">
+            <span class="sound-pad-icon">💥</span>
+            <span class="sound-pad-title">Sub Bass Impact</span>
+            <span class="sound-pad-tag">35Hz Sine Drop</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="whoosh">
+            <span class="sound-pad-icon">🌪️</span>
+            <span class="sound-pad-title">Fast Whoosh Hit</span>
+            <span class="sound-pad-tag">Transition Sweep</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="riser">
+            <span class="sound-pad-icon">📈</span>
+            <span class="sound-pad-title">Tension Riser</span>
+            <span class="sound-pad-tag">Suspense Build</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="uipop">
+            <span class="sound-pad-icon">✨</span>
+            <span class="sound-pad-title">Graphic Pop / Ding</span>
+            <span class="sound-pad-tag">Animated Callout</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="glitch">
+            <span class="sound-pad-icon">⚡</span>
+            <span class="sound-pad-title">Digital Glitch</span>
+            <span class="sound-pad-tag">Pattern Interrupt</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="camera">
+            <span class="sound-pad-icon">📸</span>
+            <span class="sound-pad-title">Camera Shutter</span>
+            <span class="sound-pad-tag">Freeze Frame</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="coin">
+            <span class="sound-pad-icon">🪙</span>
+            <span class="sound-pad-title">Achievement Chime</span>
+            <span class="sound-pad-tag">Gamified Reward</span>
+          </button>
+          <button class="sound-pad-btn" data-sound="laser">
+            <span class="sound-pad-icon">🚀</span>
+            <span class="sound-pad-title">Sci-Fi HUD Laser</span>
+            <span class="sound-pad-tag">Futuristic Accent</span>
+          </button>
+        </div>
+
+        <!-- Real-Time Visualizer Animation Stage -->
+        <div style="margin-top: 10px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 6px;">
+            <span>SPECTRUM FREQUENCY MONITOR</span>
+            <span id="sound-status-text">CLICK A PAD TO PLAY</span>
+          </div>
+          <div class="visualizer-stage" id="visualizer-stage">
+            <!-- 24 dynamic visualizer bars generated by app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Retention Lab (Viewer Retention Simulator) -->
+  <section class="section" id="retention-lab">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan">Analytics Engineering</div>
+        <h2>Viewer Retention Graph Simulator</h2>
+        <p>Compare standard average editor drop-offs vs. Apex Retention Architecture throughout a 10-minute YouTube video.</p>
+      </div>
+
+      <div class="retention-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-weight: 700; font-size: 1.1rem;">YouTube Analytics Graph Simulation</span>
+            <span style="display: block; font-size: 0.82rem; color: var(--text-muted);">Click nodes below to inspect retention tactics</span>
+          </div>
+          <div style="display: flex; gap: 16px; font-size: 0.85rem; font-weight: 600;">
+            <span style="color: var(--accent-amber); display: flex; align-items: center; gap: 6px;">
+              <span style="width: 12px; height: 3px; background: var(--accent-amber); display: inline-block;"></span> Apex Cuts Edit (72% Avg)
+            </span>
+            <span style="color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+              <span style="width: 12px; height: 2px; background: #64748b; display: inline-block;"></span> Standard Amateur Edit (28% Avg)
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive SVG Graph -->
+        <div class="retention-graph-box">
+          <svg class="retention-svg-wrapper" viewBox="0 0 800 220" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+            <!-- Grid Lines -->
+            <line x1="0" y1="50" x2="800" y2="50" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+            <line x1="0" y1="110" x2="800" y2="110" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+            <line x1="0" y1="170" x2="800" y2="170" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4"/>
+
+            <!-- Standard Drop Off (Grey line) -->
+            <path d="M 0 20 C 100 120, 250 160, 450 180 C 600 190, 750 195, 800 198" fill="none" stroke="#64748b" stroke-width="2.5" stroke-dasharray="6"/>
+
+            <!-- Apex Cuts Retention Line (Amber glowing curve) -->
+            <path d="M 0 15 C 80 25, 180 30, 260 38 C 360 42, 480 48, 580 52 C 680 55, 750 62, 800 68" fill="none" stroke="var(--accent-amber)" stroke-width="4" style="filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));"/>
+
+            <!-- Checkpoint Markers on Apex Line -->
+            <circle cx="20" cy="17" r="6" fill="var(--accent-amber)" class="retention-dot" data-idx="0" style="cursor: pointer;"/>
+            <circle cx="180" cy="30" r="6" fill="var(--accent-amber)" class="retention-dot" data-idx="1" style="cursor: pointer;"/>
+            <circle cx="360" cy="42" r="6" fill="var(--accent-amber)" class="retention-dot" data-idx="2" style="cursor: pointer;"/>
+            <circle cx="580" cy="52" r="6" fill="var(--accent-amber)" class="retention-dot" data-idx="3" style="cursor: pointer;"/>
+            <circle cx="780" cy="67" r="6" fill="var(--accent-amber)" class="retention-dot" data-idx="4" style="cursor: pointer;"/>
+          </svg>
+        </div>
+
+        <!-- Checkpoints Explanation Row -->
+        <div class="retention-checkpoints-row" id="retention-checkpoints-row">
+          <div class="retention-node-card active" data-idx="0">
+            <div class="retention-timestamp">0:00 - 0:15</div>
+            <div class="retention-node-title">The 3-Sec Hook Trap</div>
+            <div class="retention-node-desc">Visual cliffhanger & sound punch immediately locking attention before bounce.</div>
+          </div>
+          <div class="retention-node-card" data-idx="1">
+            <div class="retention-timestamp">1:30 - 2:00</div>
+            <div class="retention-node-title">Pattern Interrupt</div>
+            <div class="retention-node-desc">Cinematic sound switch & fast 3D camera zoom resetting dopamine baseline.</div>
+          </div>
+          <div class="retention-node-card" data-idx="2">
+            <div class="retention-timestamp">4:15 - 5:00</div>
+            <div class="retention-node-title">Curiosity Bridge</div>
+            <div class="retention-node-desc">Animated timeline bar and preview tease of the video’s highest-stakes climax.</div>
+          </div>
+          <div class="retention-node-card" data-idx="3">
+            <div class="retention-timestamp">7:45 - 8:30</div>
+            <div class="retention-node-title">B-Roll Frenzy</div>
+            <div class="retention-node-desc">High-tempo montage with licensed soundtrack sync combating mid-video dropoff.</div>
+          </div>
+          <div class="retention-node-card" data-idx="4">
+            <div class="retention-timestamp">10:00+</div>
+            <div class="retention-node-title">End-Screen Loop</div>
+            <div class="retention-node-desc">Seamless sentence link straight into the next video card to boost session time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Section -->
+  <section class="section" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">The Visual Difference</div>
+        <h2>Raw Footage vs. Master Grade</h2>
+        <p>Drag the interactive slider to see the difference professional color grading, grain mapping, and visual cleanup makes.</p>
+      </div>
+
+      <div class="comparison-container">
+        <div class="comparison-slider-box" id="comparison-slider-box">
+          <!-- After Image (Color Graded & Polished) -->
+          <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1600&q=80" alt="Master Color Graded Edit" class="comp-img comp-after">
+          <div class="comp-label label-after">After (Apex Grade & SFX)</div>
+
+          <!-- Before Image (Flat Log / Raw) -->
+          <div class="comp-before-wrapper" id="comp-before-wrapper">
+            <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1600&q=20&sat=-80&con=30" alt="Raw Log Footage" class="comp-img comp-before">
+            <div class="comp-label label-before">Before (Raw Flat Log)</div>
+          </div>
+
+          <!-- Drag Handle -->
+          <div class="slider-handle" id="comp-slider-handle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+              <polyline points="9 18 3 12 9 6"></polyline>
+            </svg>
+          </div>
+
+          <input type="range" min="0" max="100" value="50" class="slider-range-input" id="comp-slider-input" aria-label="Before after comparison slider">
+        </div>
+
+        <!-- 4 Key Enhancements -->
+        <div class="comparison-features-grid">
+          <div class="comp-feature-card">
+            <div class="comp-feature-title">🎨 ACES Color Pipeline</div>
+            <div class="comp-feature-desc">Film emulation, skin tone isolation, and rich dynamic range tailored for OLED and mobile screens.</div>
+          </div>
+          <div class="comp-feature-card">
+            <div class="comp-feature-title">🔊 Layered Sound Foley</div>
+            <div class="comp-feature-desc">Over 80+ unique risers, whooshes, sub drops, and ambient textures mixed per video.</div>
+          </div>
+          <div class="comp-feature-card">
+            <div class="comp-feature-title">⚡ Kinetic Graphics</div>
+            <div class="comp-feature-desc">Custom 3D tracked callouts, glowing pointers, and physics-driven spring typography.</div>
+          </div>
+          <div class="comp-feature-card">
+            <div class="comp-feature-title">📈 Retention Architecture</div>
+            <div class="comp-feature-desc">Every 3-5 seconds contains an audio-visual pattern interrupt to reset viewer attention.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Interactive Real-Time Price Estimator & Quote Calculator -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-amber">Interactive Tool</div>
+        <h2>Instant Project Cost Calculator</h2>
+        <p>Calculate your custom project budget based on footage length, turnaround speed, and production add-ons.</p>
+      </div>
+
+      <div class="calculator-container">
+        <div class="calc-grid">
+          <!-- Calculator Controls -->
+          <div class="calc-controls">
+            <!-- Project Type Selection -->
+            <div class="calc-field-group">
+              <div class="calc-label-row">
+                <span class="calc-label">1. Project Category</span>
+                <span class="calc-val-badge" id="calc-badge-type">YouTube Longform</span>
+              </div>
+              <div class="calc-type-grid" id="calc-type-selector">
+                <div class="calc-type-btn active" data-type="youtube" data-base="350">
+                  <span class="calc-type-icon">📺</span>
+                  <span class="calc-type-name">YouTube Longform</span>
+                </div>
+                <div class="calc-type-btn" data-type="shorts" data-base="150">
+                  <span class="calc-type-icon">📱</span>
+                  <span class="calc-type-name">Shorts / Reels Batch</span>
+                </div>
+                <div class="calc-type-btn" data-type="commercial" data-base="750">
+                  <span class="calc-type-icon">🎬</span>
+                  <span class="calc-type-name">Commercial / Ad</span>
+                </div>
+                <div class="calc-type-btn" data-type="podcast" data-base="300">
+                  <span class="calc-type-icon">🎙️</span>
+                  <span class="calc-type-name">Podcast Multi-Cam</span>
+                </div>
+                <div class="calc-type-btn" data-type="gaming" data-base="250">
+                  <span class="calc-type-icon">🎮</span>
+                  <span class="calc-type-name">Gaming Montage</span>
+                </div>
+                <div class="calc-type-btn" data-type="documentary" data-base="600">
+                  <span class="calc-type-icon">🏛️</span>
+                  <span class="calc-type-name">Docu / Essay Style</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Raw Footage Slider -->
+            <div class="calc-field-group">
+              <div class="calc-label-row">
+                <span class="calc-label">2. Raw Footage Volume</span>
+                <span class="calc-val-badge" id="calc-footage-val">45 Mins Raw</span>
+              </div>
+              <input type="range" min="10" max="180" step="5" value="45" class="range-slider-styled" id="calc-footage-slider">
+            </div>
+
+            <!-- Target Finished Length Slider -->
+            <div class="calc-field-group">
+              <div class="calc-label-row">
+                <span class="calc-label">3. Target Finished Video Length</span>
+                <span class="calc-val-badge" id="calc-length-val">12 Mins Finished</span>
+              </div>
+              <input type="range" min="1" max="40" step="1" value="12" class="range-slider-styled" id="calc-length-slider">
+            </div>
+
+            <!-- Turnaround Speed -->
+            <div class="calc-field-group">
+              <div class="calc-label-row">
+                <span class="calc-label">4. Turnaround Speed</span>
+                <span class="calc-val-badge" id="calc-speed-val">Standard (3-4 Days)</span>
+              </div>
+              <div class="calc-speed-options" id="calc-speed-selector">
+                <div class="speed-option-btn active" data-speed="standard" data-multiplier="1.0">Standard (3-4 Days)</div>
+                <div class="speed-option-btn" data-speed="fast" data-multiplier="1.25">Priority (48 Hours +25%)</div>
+                <div class="speed-option-btn" data-speed="rush" data-multiplier="1.5">Rush (24 Hours +50%)</div>
+              </div>
+            </div>
+
+            <!-- Production Add-ons -->
+            <div class="calc-field-group">
+              <div class="calc-label-row">
+                <span class="calc-label">5. Optional Add-ons</span>
+              </div>
+              <div class="custom-checkbox-group" id="calc-addons-group">
+                <label class="checkbox-pill">
+                  <input type="checkbox" class="calc-addon" data-cost="90" value="CTR Thumbnail">
+                  <span>Custom High-CTR Thumbnail (+$90)</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" class="calc-addon" data-cost="150" value="3D Motion Callouts">
+                  <span>3D Motion Graphics & Tracking (+$150)</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" class="calc-addon" data-cost="120" value="Dolby Foley Sound Pack">
+                  <span>Pro Foley Sound Mix (+$120)</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" class="calc-addon" data-cost="80" value="Subtitles Multi-Language">
+                  <span>Animated Word-by-Word Captions (+$80)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Quote Invoice Breakdown Card -->
+          <div class="quote-summary-panel">
+            <div class="quote-panel-header">
+              <div class="badge badge-cyan">Estimated Investment</div>
+              <div class="quote-total-price">
+                <span style="font-size: 1.8rem; color: var(--accent-amber);">$</span>
+                <span id="quote-final-amount">490</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Includes 2 revision rounds and 4K ProRes master export</p>
+            </div>
+
+            <ul class="quote-breakdown-list">
+              <li class="quote-breakdown-row">
+                <span>Base Edit Rate:</span>
+                <span id="breakdown-base" style="font-family: var(--font-mono); color: #fff;">$350</span>
+              </li>
+              <li class="quote-breakdown-row">
+                <span>Footage Complexity:</span>
+                <span id="breakdown-footage" style="font-family: var(--font-mono); color: #fff;">+$60</span>
+              </li>
+              <li class="quote-breakdown-row">
+                <span>Turnaround Multiplier:</span>
+                <span id="breakdown-turnaround" style="font-family: var(--font-mono); color: #fff;">1.0x</span>
+              </li>
+              <li class="quote-breakdown-row">
+                <span>Selected Add-ons:</span>
+                <span id="breakdown-addons" style="font-family: var(--font-mono); color: #fff;">+$0</span>
+              </li>
+              <li class="quote-breakdown-row total-row">
+                <span>Total Estimate:</span>
+                <span id="breakdown-total" style="font-family: var(--font-mono); color: var(--accent-amber);">$490</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary btn-lg" style="width: 100%;" id="apply-quote-to-form-btn">
+              Transfer to Booking Form &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editing Pipeline / Secret Sauce -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan">Editing Methodology</div>
+        <h2>How I Turn Views Into Obsession</h2>
+        <p>A proven 4-step editing framework developed over 5+ years working with 7-figure creators and global commercial brands.</p>
+      </div>
+
+      <div class="workflow-grid">
+        <div class="workflow-card">
+          <span class="workflow-step-num">STAGE 01</span>
+          <div class="workflow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="workflow-title">Story & Hook Architecture</h3>
+          <p class="workflow-desc">Trimming all breathing pauses, eliminating tangents, and structuring the first 10 seconds to create an irresistible narrative curiosity gap.</p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="workflow-step-num">STAGE 02</span>
+          <div class="workflow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 class="workflow-title">Dynamic Motion & Assets</h3>
+          <p class="workflow-desc">Custom After Effects 2D/3D kinetic animations, motion tracked zoom-ins, stylized lower thirds, and premium stock B-roll insertion.</p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="workflow-step-num">STAGE 03</span>
+          <div class="workflow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </div>
+          <h3 class="workflow-title">Immersive Sound Foley</h3>
+          <p class="workflow-desc">Audio is 60% of video retention. Deep sub drops, dynamic whooshes, crisp UI clicks, vocal mastering, and ducked adaptive background music.</p>
+        </div>
+
+        <div class="workflow-card">
+          <span class="workflow-step-num">STAGE 04</span>
+          <div class="workflow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="workflow-title">Color Grade & 4K Export</h3>
+          <p class="workflow-desc">DaVinci Resolve studio color grading with cinematic contrast curves, bitrate optimization for YouTube/TikTok compression, and fast delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Packages & Services -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Transparent Pricing</div>
+        <h2>Monthly Packages & Project Rates</h2>
+        <p>No hidden fees. Select a package below to auto-fill your project brief in the booking form.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1: Short-Form Velocity -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Short-Form Velocity</h3>
+              <p class="tier-tagline">Engineered for TikTok, Instagram Reels, and YouTube Shorts creators aiming for viral growth.</p>
+            </div>
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">650</span>
+              <span class="price-period">/ 10 Shorts Pack</span>
+            </div>
+            <ul class="features-list">
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 10 Vertical Edits (9:16)</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Word-by-Word Animated Subtitles</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Sound Effects & Micro-animations</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 24 to 48-Hour Turnaround</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 2 Rounds of Revisions</li>
+            </ul>
+          </div>
+          <button class="btn btn-secondary" onclick="selectPackage('Short-Form Velocity (10 Shorts)', '$500 - $1,500', 'TikTok / Shorts / Reels')">
+            Book Velocity Pack &rarr;
+          </button>
+        </div>
+
+        <!-- Tier 2: Creator Pro Suite (Featured) -->
+        <div class="pricing-card featured">
+          <div class="featured-ribbon">Most Popular for YouTubers</div>
+          <div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Creator Pro Suite</h3>
+              <p class="tier-tagline">Complete YouTube management editing for channels with 50K+ subscribers looking to scale.</p>
+            </div>
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">1,400</span>
+              <span class="price-period">/ month (4 Longform)</span>
+            </div>
+            <ul class="features-list">
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 4 Full YouTube Videos (up to 15 min each)</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Full Retention Pacing & Hook Optimization</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 120+ Sound Effects Layers & Pro Foley</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> 2 High-CTR YouTube Thumbnails Included</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Dedicated Private Slack/Discord Channel</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Priority 48-Hour Queue</li>
+            </ul>
+          </div>
+          <button class="btn btn-primary" onclick="selectPackage('Creator Pro Suite (Monthly YouTube)', '$1,500 - $3,000', 'YouTube Longform')">
+            Select Pro Suite &rarr;
+          </button>
+        </div>
+
+        <!-- Tier 3: Commercial & Brand Cinema -->
+        <div class="pricing-card">
+          <div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Commercial Cinema</h3>
+              <p class="tier-tagline">High-production commercials, product launches, SaaS trailers, and music videos.</p>
+            </div>
+            <div class="price-box">
+              <span class="price-currency">$</span>
+              <span class="price-amount">2,800</span>
+              <span class="price-period">/ project</span>
+            </div>
+            <ul class="features-list">
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Broadcast Quality 4K Master Export</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Custom 3D Camera Tracking & CGI Integration</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Full DaVinci Studio Color Grade with LUTs</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Original Licensed Audio Composition</li>
+              <li class="feature-item"><span class="feature-icon-check">✓</span> Unlimited Revisions until Delivery</li>
+            </ul>
+          </div>
+          <button class="btn btn-secondary" onclick="selectPackage('Commercial Cinema Project', '$3,000+', 'Commercial / Brand Ad')">
+            Inquire Commercial &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials & Social Proof -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan">Client Endorsements</div>
+        <h2>What Creators & Directors Say</h2>
+        <p>Real feedback from creators whose channels scaled by millions of views after partnering with Apex Cuts.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Alex completely revolutionized my YouTube channel. Our average percentage viewed went from 38% to over 64% in our very first collaboration. He doesn't just cut clips—he engineers storytelling."
+            </p>
+          </div>
+          <div>
+            <div class="client-author-info">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance Avatar" class="author-avatar">
+              <div>
+                <div class="author-name">Marcus Vance</div>
+                <div class="author-channel">Tech & Lifestyle YouTuber (1.4M Subs)</div>
+              </div>
+            </div>
+            <div class="author-metric-badge">+1.2M Views in 30 Days</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "For our sneaker brand launch, Alex provided 3D camera tracks and sound design that looked straight out of a Nike campaign. The ad converted at a 4.8x ROAS on Meta and TikTok."
+            </p>
+          </div>
+          <div>
+            <div class="client-author-info">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova Avatar" class="author-avatar">
+              <div>
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-channel">CMO @ AERO Athletic Footwear</div>
+              </div>
+            </div>
+            <div class="author-metric-badge">4.8x Ad ROAS Generated</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              "Fastest turnaround in the business without sacrificing a single drop of quality. Having him on monthly retainer is the best investment our production agency made this year."
+            </p>
+          </div>
+          <div>
+            <div class="client-author-info">
+              <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80" alt="David Sterling Avatar" class="author-avatar">
+              <div>
+                <div class="author-name">David Sterling</div>
+                <div class="author-channel">Creative Director @ Horizon Media</div>
+              </div>
+            </div>
+            <div class="author-metric-badge">38 Projects Shipped On-Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Lead Gathering Engine -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-live">Let's Work Together</div>
+        <h2>Start Your Next Video Project</h2>
+        <p>Fill out the project brief below or reach out directly. I respond to all inquiries within 2 hours with availability, creative direction, and quote.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information & Direct Channels -->
+        <div class="contact-info-panel" id="contact-info-panel">
+          <h3 class="contact-card-title">Direct Contact & Channels</h3>
+          <p class="contact-card-desc">Prefer a direct message or want to share raw footage links directly? Connect through any of the verified channels below.</p>
+
+          <!-- Live Availability Status -->
+          <div class="availability-box">
+            <span class="pulse-dot"></span>
+            <div>
+              <div class="avail-status">Online & Accepting Bookings</div>
+              <div class="avail-sub">Local Time: <span id="live-time-display" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">--:--:--</span> (EST / New York)</div>
+            </div>
+          </div>
+
+          <!-- Direct Links with Copy Action -->
+          <div class="direct-contact-list">
+            <div class="direct-contact-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">✉️</div>
+                <div>
+                  <div class="contact-label-title">Direct Email</div>
+                  <div class="contact-label-val">alexreed.edits@gmail.com</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="alexreed.edits@gmail.com" title="Copy Email">
+                <span>📋 Copy</span>
+              </button>
+            </div>
+
+            <div class="direct-contact-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">💬</div>
+                <div>
+                  <div class="contact-label-title">Discord Handle</div>
+                  <div class="contact-label-val">ApexCuts#9921</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="ApexCuts#9921" title="Copy Discord">
+                <span>📋 Copy</span>
+              </button>
+            </div>
+
+            <div class="direct-contact-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">✈️</div>
+                <div>
+                  <div class="contact-label-title">Telegram Username</div>
+                  <div class="contact-label-val">@AlexApexCuts</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="@AlexApexCuts" title="Copy Telegram">
+                <span>📋 Copy</span>
+              </button>
+            </div>
+
+            <div class="direct-contact-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box">📍</div>
+                <div>
+                  <div class="contact-label-title">Studio Location</div>
+                  <div class="contact-label-val">New York, NY • Remote Worldwide</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">Follow My Edits</div>
+            <div class="social-links-row">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="YouTube" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="Twitter / X" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-btn" title="Behance" aria-label="Behance">
+                <span style="font-weight: 800; font-family: var(--font-heading);">Bē</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Booking / Inquiry Form -->
+        <div class="contact-form-panel">
+          <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Project Inquiry Form</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">Tell me about your vision, timeline, and footage details.</p>
+
+          <form id="inquiry-form" novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="client-name" class="form-label">Your Name / Brand <span class="req">*</span></label>
+                <input type="text" id="client-name" class="form-input" placeholder="e.g. Liam Parker" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-email" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="client-email" class="form-input" placeholder="e.g. liam@channel.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="client-handle" class="form-label">Channel / Social / Discord</label>
+                <input type="text" id="client-handle" class="form-input" placeholder="@yourchannel or Discord ID">
+              </div>
+
+              <div class="form-group">
+                <label for="project-type" class="form-label">Project Category <span class="req">*</span></label>
+                <select id="project-type" class="form-select" required>
+                  <option value="YouTube Longform">YouTube Longform (8-25 min)</option>
+                  <option value="TikTok / Shorts / Reels">Short-Form Batch (Reels/TikTok)</option>
+                  <option value="Commercial / Brand Ad">Commercial & Brand Promo</option>
+                  <option value="Gaming Montage">Gaming & Esports Montage</option>
+                  <option value="Podcast & Talking Head">Full Podcast Multi-Cam</option>
+                  <option value="Docu / Essay Style">Documentary / Video Essay</option>
+                  <option value="VFX & Color Only">Color Grading / 3D VFX Only</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="project-budget" class="form-label">Estimated Budget</label>
+                <select id="project-budget" class="form-select">
+                  <option value="$300 - $500">$300 – $500</option>
+                  <option value="$500 - $1,500" selected>$500 – $1,500</option>
+                  <option value="$1,500 - $3,000">$1,500 – $3,000</option>
+                  <option value="$3,000+">$3,000+ (Commercial / Retainer)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="project-deadline" class="form-label">Target Deadline</label>
+                <select id="project-deadline" class="form-select">
+                  <option value="Rush: 24 to 48 Hours">Rush (24-48 Hours)</option>
+                  <option value="3 to 5 Days" selected>3 to 5 Days</option>
+                  <option value="1 to 2 Weeks">1 to 2 Weeks</option>
+                  <option value="Flexible Timeline">Flexible / Ongoing Monthly</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="footage-link" class="form-label">Raw Footage / Script Link (Optional)</label>
+              <input type="url" id="footage-link" class="form-input" placeholder="Google Drive, Dropbox, WeTransfer, Frame.io link">
+            </div>
+
+            <!-- Addon Preferences -->
+            <div class="form-group">
+              <label class="form-label">Select Add-ons Needed</label>
+              <div class="custom-checkbox-group">
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="addons" value="YouTube Thumbnail Design">
+                  <span>Custom YouTube Thumbnail</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="addons" value="Custom 3D Motion Graphics">
+                  <span>3D Motion Graphics & HUD</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="addons" value="Full Multi-Track Sound Foley">
+                  <span>Pro Dolby Sound Mix</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="addons" value="Project Files Delivery">
+                  <span>Project Premiere/DaVinci Files</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="client-message" class="form-label">Project Details & Reference Videos</label>
+              <textarea id="client-message" class="form-textarea" placeholder="Paste inspiration video links, style references (e.g. Ali Abdaal, MrBeast, MagnatesMedia, Nike style), and any specific guidelines..."></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="submit-inquiry-btn">
+                Send Project Brief & Request Availability &rarr;
+              </button>
+            </div>
+
+            <!-- Dynamic Status Message Container -->
+            <div id="form-status-msg" class="form-status-msg" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan">Clear Answers</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about turnaround times, sending raw 4K footage, and working together.</p>
+      </div>
+
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item active">
+          <div class="faq-header">
+            <div class="faq-question">What is your turnaround time for YouTube videos and Shorts?</div>
+            <div class="faq-icon-arrow">▼</div>
+          </div>
+          <div class="faq-body">
+            <p class="faq-answer">
+              Standard turnaround for a polished 10–15 minute YouTube edit is 48 to 72 hours. Vertical Shorts / Reels batches are delivered in 24–48 hours. Rush delivery (24-hour turnaround) is available on request.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">How do I send my raw camera footage and audio files?</div>
+            <div class="faq-icon-arrow">▼</div>
+          </div>
+          <div class="faq-body">
+            <p class="faq-answer">
+              You can upload files to Google Drive, Dropbox, WeTransfer, or Frame.io. I also support direct S3 bucket transfers and private FTP servers for high-volume 4K ProRes/RAW multi-terabyte shoots.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">How do revisions work if I want changes made?</div>
+            <div class="faq-icon-arrow">▼</div>
+          </div>
+          <div class="faq-body">
+            <p class="faq-answer">
+              All projects include 2 full rounds of timestamped revisions via Frame.io or Loom links. You can leave comments directly on the exact video frame for swift, zero-misunderstanding adjustments.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <div class="faq-question">Can you edit in the style of MrBeast, Iman Gadzhi, or MagnatesMedia?</div>
+            <div class="faq-icon-arrow">▼</div>
+          </div>
+          <div class="faq-body">
+            <p class="faq-answer">
+              Yes! I specialize in reverse-engineering top creator styles including high-energy fast cuts (MrBeast/Airrack), cinematic documentary style (MagnatesMedia/Johnny Harris), and modern talking-head aesthetic (Iman Gadzhi/Ali Abdaal).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Lightbox Modal with Device Aspect Mode Toggle -->
+  <div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close preview modal">✕</button>
+      
+      <div class="modal-video-container" id="modal-video-container">
+        <video class="modal-video-player" id="modal-video" controls playsinline></video>
+      </div>
+
+      <div class="modal-content-details">
+        <div class="modal-header-row">
+          <div>
+            <div class="badge badge-cyan" id="modal-category">YOUTUBE</div>
+            <h3 class="modal-title" id="modal-title">Project Title</h3>
+            <div class="modal-client" id="modal-client">Client Name</div>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-sm" onclick="closeVideoModal()">Hire for Similar Edit</a>
+        </div>
+
+        <div class="modal-specs-grid">
+          <div class="modal-spec-item">
+            <div class="spec-label">Views / Impact</div>
+            <div class="spec-val" id="modal-views">4.8M Views</div>
+          </div>
+          <div class="modal-spec-item">
+            <div class="spec-label">Retention Score</div>
+            <div class="spec-val" id="modal-retention">+86% Retention</div>
+          </div>
+          <div class="modal-spec-item">
+            <div class="spec-label">Runtime</div>
+            <div class="spec-val" id="modal-duration">14:20</div>
+          </div>
+          <div class="modal-spec-item">
+            <div class="spec-label">Delivery Format</div>
+            <div class="spec-val">4K UHD Master</div>
+          </div>
+        </div>
+
+        <p class="modal-description" id="modal-description">Detailed description of the edit.</p>
+
+        <div style="margin-bottom: 24px; padding: 16px; background: var(--bg-surface); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-amber); margin-bottom: 4px; text-transform: uppercase;">The Challenge</div>
+          <p id="modal-challenge" style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;"></p>
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-emerald); margin-bottom: 4px; text-transform: uppercase;">The Creative Solution</div>
+          <p id="modal-solution" style="font-size: 0.88rem; color: var(--text-secondary);"></p>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#contact" class="btn btn-primary" onclick="closeVideoModal()">Request Quote for Your Project</a>
+          <button class="btn btn-secondary" onclick="closeVideoModal()">Close Window</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW FEATURE: Client Lead & Inquiries CRM Drawer -->
+  <div class="drawer-backdrop" id="lead-drawer-backdrop">
+    <div class="drawer-panel" id="lead-drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <h3 style="font-size: 1.15rem;">Submitted Project Briefs</h3>
+          <p style="font-size: 0.78rem; color: var(--text-muted);">Stored locally in your browser workspace</p>
+        </div>
+        <button class="modal-close-btn" id="close-drawer-btn" style="position: static;">✕</button>
+      </div>
+
+      <div class="drawer-body" id="drawer-leads-list">
+        <!-- Populated via JS -->
+      </div>
+
+      <div style="padding: 20px; border-top: 1px solid var(--border-subtle); display: flex; gap: 10px;">
+        <button class="btn btn-secondary btn-sm" id="export-leads-btn" style="flex: 1;">📥 Export JSON</button>
+        <button class="btn btn-outline btn-sm" id="clear-leads-btn" style="flex: 1;">Clear Briefs</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon">AC</div>
+            <div>
+              <span class="brand-name">APEX CUTS</span>
+              <span class="brand-tag">Senior Video Editor</span>
+            </div>
+          </div>
+          <p>
+            Crafting high-retention video edits for top creators, agencies, and brands worldwide. Taking raw ideas and turning them into visual impact.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#showreel" class="footer-link">Master Showreel</a></li>
+            <li><a href="#portfolio" class="footer-link">Featured Edits Gallery</a></li>
+            <li><a href="#sound-lab" class="footer-link">Sound Design Lab</a></li>
+            <li><a href="#retention-lab" class="footer-link">Retention Simulator</a></li>
+            <li><a href="#calculator" class="footer-link">Price Estimator</a></li>
+            <li><a href="#pricing" class="footer-link">Packages & Rates</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Direct Inquiries</div>
+          <ul class="footer-links">
+            <li><a href="mailto:alexreed.edits@gmail.com" class="footer-link">alexreed.edits@gmail.com</a></li>
+            <li><span style="color: var(--text-secondary); font-size: 0.88rem;">Discord: ApexCuts#9921</span></li>
+            <li><span style="color: var(--text-secondary); font-size: 0.88rem;">Telegram: @AlexApexCuts</span></li>
+            <li><span style="color: var(--text-secondary); font-size: 0.88rem;">New York, NY • Remote Worldwide</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Apex Cuts • Alex Reed. All rights reserved. Built with HTML, CSS, and JS.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#hero" class="footer-link">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

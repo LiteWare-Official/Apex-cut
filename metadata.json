@@ -1,0 +1,6 @@
+{
+  "name": "Apex Cuts - Video Editor Portfolio",
+  "description": "A cinematic portfolio website for a professional video editor to showcase reels, YouTube edits, VFX, and convert incoming client leads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
