@@ -42,7 +42,7 @@
   --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.2);
 }
 
-/* Reset & Base Setup */
+/* Reset & Base Setup (Chrome, Safari, Firefox, Edge Normalization) */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -52,6 +52,8 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -63,6 +65,34 @@ body {
   overflow-x: hidden;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Chrome, Edge & Safari Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a36;
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-amber);
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #262a36 var(--bg-primary);
 }
 
 /* Ambient Grain & Background Glow */
@@ -722,6 +752,7 @@ p {
   right: 12px;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -737,6 +768,7 @@ p {
   left: 12px;
   background: rgba(18, 20, 26, 0.85);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -941,6 +973,8 @@ p {
 }
 
 .range-slider-styled {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 0.1);
@@ -948,6 +982,34 @@ p {
   outline: none;
   accent-color: var(--accent-amber);
   cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.range-slider-styled::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.range-slider-styled::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #fbbf24;
+}
+
+.range-slider-styled::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
 }
 
 .calc-speed-options {
@@ -1192,6 +1254,7 @@ p {
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   display: none;
   opacity: 0;
@@ -1361,6 +1424,7 @@ p {
   letter-spacing: 0.08em;
   border-radius: var(--radius-pill);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 3;
 }
 
@@ -1402,8 +1466,11 @@ p {
   width: 100%;
   height: 100%;
   opacity: 0;
+  -webkit-appearance: none;
+  appearance: none;
   cursor: ew-resize;
   z-index: 5;
+  touch-action: pan-y;
 }
 
 .comparison-features-grid {
