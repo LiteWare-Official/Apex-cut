@@ -2313,81 +2313,505 @@ p {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Responsive Media Queries */
+/* ==========================================================================
+   Comprehensive Responsive System (Desktop, Tablet, Mobile L/M/S)
+   ========================================================================== */
+
+/* Breakpoint 1: Laptops & Small Desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1080px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-grid {
+    gap: 40px;
+  }
+  .pricing-grid {
+    gap: 20px;
+  }
+  .portfolio-grid {
+    gap: 20px;
+  }
+}
+
+/* Breakpoint 2: Tablets & Medium Screens (<= 1024px) */
 @media (max-width: 1024px) {
+  .section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+  .hero-content {
+    max-width: 100%;
   }
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .pricing-grid, .testimonials-grid, .workflow-grid, .calc-grid {
+  .pricing-grid {
     grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
     gap: 24px;
   }
-  .sound-pads-grid {
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .calc-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .quote-summary-panel {
+    position: static;
+    top: auto;
+    width: 100%;
+  }
+  .sound-pads-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
   }
   .retention-checkpoints-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
   .comparison-features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 32px;
   }
 }
 
+/* Breakpoint 3: Tablets Portrait & Large Mobile (<= 768px) */
 @media (max-width: 768px) {
+  .section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+  .section-header {
+    margin-bottom: 36px;
+  }
+  
+  /* Mobile Navigation Menu */
+  .navbar {
+    height: 72px;
+  }
+  .nav-container {
+    height: 72px;
+  }
   .nav-links {
     position: fixed;
-    top: 76px;
+    top: 72px;
     left: 0;
     width: 100%;
-    background: var(--bg-surface);
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    background: rgba(11, 13, 17, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-subtle);
     flex-direction: column;
-    padding: 24px;
-    gap: 18px;
+    padding: 20px 16px 28px 16px;
+    gap: 8px;
     display: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+    z-index: 999;
   }
   .nav-links.mobile-open {
     display: flex;
+    animation: fadeInNav 0.2s ease forwards;
+  }
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+  }
+  .nav-link:hover, .nav-link.active {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.25);
+    color: var(--accent-amber);
+  }
+  .nav-link::after {
+    display: none;
   }
   .mobile-menu-btn {
     display: flex;
   }
+  
+  /* Hero & Stats */
+  .hero-section {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 6.5vw, 3rem);
+  }
+  .hero-description {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+  
+  /* Portfolio Horizontal Scroll Filter & Cards */
+  .portfolio-controls {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 4px 16px 12px 16px;
+    margin: 0 -16px 28px -16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .portfolio-controls::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.82rem;
   }
   .portfolio-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .calc-type-grid {
-    grid-template-columns: 1fr;
+  
+  /* Sound Lab */
+  .sound-lab-container {
+    padding: 24px 18px;
   }
   .sound-pads-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  /* Retention Lab */
+  .retention-container {
+    padding: 24px 18px;
+  }
+  .retention-graph-box {
+    height: 220px;
+    padding: 14px;
   }
   .retention-checkpoints-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Calculator & Form */
+  .calculator-container {
+    padding: 24px 18px;
+  }
+  .calc-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .custom-checkbox-group {
     grid-template-columns: 1fr;
   }
-  .comparison-features-grid {
+  .contact-info-panel, .contact-form-panel {
+    padding: 28px 20px;
+  }
+  .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  /* Video Modal */
+  .modal-backdrop {
+    padding: 12px;
+  }
+  .modal-content-details {
+    padding: 20px 18px;
   }
   .modal-specs-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
   }
+}
+
+/* Breakpoint 4: Standard Mobile Screens (<= 540px) */
+@media (max-width: 540px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  
+  /* Header Adjustments */
+  .brand-name {
+    font-size: 1.05rem;
+  }
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .nav-actions {
+    gap: 6px;
+  }
+  .btn-drawer-toggle {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+  #nav-cta-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+  
+  /* Hero CTA full width */
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px 10px;
+  }
+  .stat-value {
+    font-size: 1.25rem;
+  }
+  .stat-label {
+    font-size: 0.68rem;
+  }
+  
+  /* Software Ticker */
+  .ticker-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .ticker-logos {
+    justify-content: center;
+    gap: 8px;
+  }
+  .tool-chip {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+  
+  /* Video Card Meta */
+  .video-card-meta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    text-align: left;
+    padding: 16px;
+  }
+  .video-card-meta button {
+    width: 100%;
+  }
+  
+  /* Sound Design Lab */
+  .sound-pads-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .sound-pad-btn {
+    padding: 14px 10px;
+    min-height: 82px;
+  }
+  .sound-pad-icon {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  .sound-pad-title {
+    font-size: 0.82rem;
+  }
+  .sound-pad-tag {
+    font-size: 0.68rem;
+  }
+  
+  /* Retention Lab */
+  .retention-checkpoints-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  /* Before/After Comparison */
+  .comparison-container {
+    padding: 18px 14px;
+  }
+  .comp-label {
+    font-size: 0.68rem;
+    padding: 4px 8px;
+    top: 10px;
+  }
+  .label-before {
+    left: 10px;
+  }
+  .label-after {
+    right: 10px;
+  }
+  .slider-handle {
+    width: 36px;
+    height: 36px;
+  }
+  .comparison-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  /* Calculator */
+  .calc-speed-options {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .speed-option-btn {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  .quote-total-price {
+    font-size: 2.3rem;
+  }
+  
+  /* Workflow */
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .workflow-card {
+    padding: 22px 18px;
+  }
+  
+  /* Pricing */
+  .pricing-card {
+    padding: 28px 20px;
+  }
+  
+  /* Direct Contact Items */
+  .direct-contact-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+  .contact-item-left {
+    gap: 10px;
+  }
+  .contact-label-val {
+    font-size: 0.84rem;
+    word-break: break-all;
+  }
+  .copy-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 8px;
+  }
+  .availability-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+  }
+  
+  /* Modal Lightbox */
+  .modal-dialog {
+    max-height: 94vh;
+  }
+  .modal-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .modal-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .modal-actions .btn {
+    width: 100%;
+  }
+  
+  /* Drawer Panel (CRM Leads) */
+  .drawer-panel {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Toast Notification */
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    bottom: 16px;
+  }
+  .toast {
+    width: 100%;
+    font-size: 0.82rem;
+    padding: 12px 14px;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* Breakpoint 5: Small Compact Mobile (<= 380px) */
+@media (max-width: 380px) {
+  .brand-tag {
+    display: none;
+  }
+  .calc-type-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-value {
+    font-size: 1.15rem;
+  }
+}
+
+@keyframes fadeInNav {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }

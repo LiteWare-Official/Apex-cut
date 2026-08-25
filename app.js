@@ -812,20 +812,54 @@ function initFaqAccordion() {
   });
 }
 
-// 16. Mobile Navigation
+// 16. Mobile Navigation & Global Modal Controls
 function initMobileNav() {
   const btn = document.getElementById('mobile-menu-btn');
   const links = document.getElementById('nav-links');
   if (!btn || !links) return;
 
-  btn.addEventListener('click', () => {
-    links.classList.toggle('mobile-open');
+  function toggleNav(open) {
+    const shouldOpen = typeof open === 'boolean' ? open : !links.classList.contains('mobile-open');
+    if (shouldOpen) {
+      links.classList.add('mobile-open');
+      btn.textContent = '✕';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      links.classList.remove('mobile-open');
+      btn.textContent = '☰';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleNav();
   });
 
+  // Close when clicking any nav link
   links.querySelectorAll('.nav-link').forEach(l => {
     l.addEventListener('click', () => {
-      links.classList.remove('mobile-open');
+      toggleNav(false);
     });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (links.classList.contains('mobile-open') && !links.contains(e.target) && !btn.contains(e.target)) {
+      toggleNav(false);
+    }
+  });
+
+  // Close modals, drawer, and nav on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      toggleNav(false);
+      closeVideoModal();
+      const drawerBackdrop = document.getElementById('lead-drawer-backdrop');
+      if (drawerBackdrop && drawerBackdrop.classList.contains('open')) {
+        drawerBackdrop.classList.remove('open');
+      }
+    }
   });
 }
 
